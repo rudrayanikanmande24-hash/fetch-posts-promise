@@ -48,7 +48,13 @@ const templating = (arr) =>{
 const createCard = (res) =>{
     let col = document.createElement('div')
     col.className='col-md-4'
+<<<<<<< HEAD
     col.innerHTML=`<div class="card-header">
+=======
+    col.innerHTML=`
+                    <div class="card h-100" id="${res.id}">
+                   <div class="card-header">
+>>>>>>> da21656 (Updated code with remove card fix)
                         <h2 class="m-0">${res.title}</h2>
                     </div>
                     <div class="card-body">
@@ -58,6 +64,10 @@ const createCard = (res) =>{
                         <button onclick="onEdit(this)" class="btn btn-sm btn-success">Edit</button>
                         <button onclick="onRemove(this)" class="btn btn-sm btn-danger">Remove</button>
                     </div>
+<<<<<<< HEAD
+=======
+                    </div>
+>>>>>>> da21656 (Updated code with remove card fix)
     
     
     
@@ -277,7 +287,11 @@ const onRemove = (ele)=>{
       })
       .then(res=>{
         cl(res)
+<<<<<<< HEAD
         ele.closest('.card').remove()
+=======
+        ele.closest('.col-md-4').remove()
+>>>>>>> da21656 (Updated code with remove card fix)
       })
       .catch(err=>{
         cl(err)
